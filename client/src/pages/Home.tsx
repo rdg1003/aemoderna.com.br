@@ -134,7 +134,7 @@ export default function Home() {
     {
       src: "/images/ae-moderna/acordos-homologados.png",
       title: "Acordos homologados",
-      desc: "Soluções formalizadas perante a Justiça, com segurança jurídica e condições negociadas para cada caso.",
+      desc: "Acordos seguros e personalizados.",
       size: "standard"
     },
     {
