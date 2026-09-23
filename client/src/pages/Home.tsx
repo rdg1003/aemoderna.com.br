@@ -194,7 +194,7 @@ export default function Home() {
               <div className="flex items-center gap-3">
                 <a href="#hero" className="inline-block transition-transform hover:scale-105 duration-200">
                   <img
-                src="/images/ae-moderna/Logo1_89eb9a49.png"
+                src="/images/ae-moderna/Logo1_header_dobro.png"
                 alt="AE Moderna - Sinônimo de Confiabilidade" 
                 className="h-[5.5rem] sm:h-[7rem] w-auto object-contain drop-shadow-[0_0_12px_rgba(168,85,247,0.35)]"
               />
