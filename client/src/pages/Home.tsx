@@ -19,7 +19,8 @@ import {
   Lock,
   ChevronRight,
   Calculator,
-  MessageCircle
+  MessageCircle,
+  Images
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -117,6 +118,51 @@ export default function Home() {
     }
   ];
 
+  const structureImages = [
+    {
+      src: "/manus-storage/estrutura-ae-moderna_f6830bca.jpg",
+      title: "Estrutura para decisões importantes",
+      desc: "Ambientes pensados para receber clientes com discrição, conforto e profissionalismo.",
+      size: "wide"
+    },
+    {
+      src: "/manus-storage/direcao-juridica_b0b18d6b.jpg",
+      title: "Direção jurídica",
+      desc: "Experiência técnica à frente de cada estratégia.",
+      size: "standard"
+    },
+    {
+      src: "/manus-storage/equipe-ae-moderna_d62f64b0.jpg",
+      title: "Nossa equipe",
+      desc: "Pessoas que trabalham juntas por soluções mais viáveis.",
+      size: "standard"
+    },
+    {
+      src: "/manus-storage/equipe-reuniao_36342732.jpg",
+      title: "Trabalho colaborativo",
+      desc: "Alinhamento e responsabilidade em cada caso atendido.",
+      size: "standard"
+    },
+    {
+      src: "/manus-storage/atendimento-consultivo_fe6e83c7.jpg",
+      title: "Atendimento próximo",
+      desc: "Escuta cuidadosa para entender o cenário completo do cliente.",
+      size: "standard"
+    },
+    {
+      src: "/manus-storage/sala-reunioes_536de476.jpg",
+      title: "Sala de reuniões",
+      desc: "Espaço reservado para análises e negociações estratégicas.",
+      size: "standard"
+    },
+    {
+      src: "/manus-storage/equipe-escritorio_93cabea2.jpg",
+      title: "Rotina de trabalho",
+      desc: "Organização e foco para acompanhar cada etapa do processo.",
+      size: "standard"
+    }
+  ];
+
   const stepsData = [
     {
       num: "01",
@@ -158,6 +204,7 @@ export default function Home() {
           <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
             <a href="#solucoes" className="hover:text-purple-400 transition-colors">Soluções</a>
             <a href="#diferenciais" className="hover:text-purple-400 transition-colors">Diferenciais</a>
+            <a href="#estrutura" className="hover:text-purple-400 transition-colors">Nossa estrutura</a>
             <a href="#resultados" className="hover:text-purple-400 transition-colors">Casos & Acordos</a>
             <a href="#simulador" className="hover:text-purple-400 transition-colors">Simulador</a>
             <a href="#processo" className="hover:text-purple-400 transition-colors">Como Funciona</a>
@@ -342,6 +389,54 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="estrutura" className="py-24 bg-[#0b0618] border-y border-purple-950">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+            <div className="max-w-2xl space-y-3">
+              <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-purple-400 font-bold">
+                <Images className="w-4 h-4" />
+                Por dentro da AE Moderna
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white">Uma estrutura feita para cuidar de decisões importantes.</h2>
+              <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                Conheça um pouco do ambiente, das pessoas e da rotina que sustentam nosso atendimento próximo, técnico e confidencial.
+              </p>
+            </div>
+            <a
+              href="#contato"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200 transition-colors shrink-0"
+            >
+              <span>Agendar conversa com a equipe</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[220px]">
+            {structureImages.map((image, index) => (
+              <figure
+                key={image.src}
+                className={`${index === 0 ? "sm:col-span-2 lg:col-span-2 lg:row-span-2" : ""} group relative overflow-hidden rounded-2xl border border-purple-900/50 bg-purple-950/30`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.title}
+                  loading={index > 1 ? "lazy" : "eager"}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#090313]/95 via-[#090313]/20 to-transparent" />
+                <figcaption className="absolute inset-x-0 bottom-0 p-5">
+                  <h3 className="text-base font-bold text-white">{image.title}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-300 max-w-sm">{image.desc}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="mt-5 text-[11px] text-slate-500">
+            Imagens institucionais da AE Moderna. Pessoas e ambientes retratados pertencem ao material fornecido pela empresa.
+          </p>
         </div>
       </section>
 
