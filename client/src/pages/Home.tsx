@@ -132,9 +132,9 @@ export default function Home() {
       size: "standard"
     },
     {
-      src: "/images/ae-moderna/equipe-ae-moderna_d62f64b0.jpg",
-      title: "Nossa equipe",
-      desc: "Pessoas que trabalham juntas por soluções mais viáveis.",
+      src: "/images/ae-moderna/acordos-homologados.png",
+      title: "Acordos homologados",
+      desc: "Soluções formalizadas perante a Justiça, com segurança jurídica e condições negociadas para cada caso.",
       size: "standard"
     },
     {
