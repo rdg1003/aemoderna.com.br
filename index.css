@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand-purple-950: #0d0718;
+  --color-brand-purple-900: #1b0d33;
+  --color-brand-purple-800: #2d1454;
+  --color-brand-purple-700: #4a1d82;
+  --color-brand-purple-600: #6b21a8;
+  --color-brand-purple-500: #8b5cf6;
+  --color-brand-purple-400: #a78bfa;
+  --color-brand-purple-300: #c4b5fd;
+  --color-brand-purple-100: #ede9fe;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: #090514;
+  --foreground: #f8fafc;
+  --card: #120b22;
+  --card-foreground: #f8fafc;
+  --popover: #120b22;
+  --popover-foreground: #f8fafc;
+  --primary: #9333ea;
+  --primary-foreground: #ffffff;
+  --secondary: #1f1438;
+  --secondary-foreground: #e2e8f0;
+  --muted: #1c1432;
+  --muted-foreground: #94a3b8;
+  --accent: #2e1a52;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(168, 85, 247, 0.16);
+  --input: rgba(168, 85, 247, 0.2);
+  --ring: #a855f7;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-color: #080312;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(126, 34, 206, 0.18) 0px, transparent 50%),
+      radial-gradient(at 100% 20%, rgba(147, 51, 234, 0.14) 0px, transparent 45%),
+      radial-gradient(at 50% 100%, rgba(88, 28, 135, 0.15) 0px, transparent 55%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+}
+
+/* Custom scrollbar and subtle glowing utilities */
+.glow-purple {
+  box-shadow: 0 0 45px -10px rgba(168, 85, 247, 0.35);
+}
+
+.glow-purple-strong {
+  box-shadow: 0 0 60px -5px rgba(168, 85, 247, 0.55);
+}
+
+.glass-panel {
+  background: rgba(19, 11, 36, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(192, 132, 252, 0.45);
+  background: rgba(28, 16, 52, 0.85);
+  box-shadow: 0 10px 30px -10px rgba(147, 51, 234, 0.3);
+}
