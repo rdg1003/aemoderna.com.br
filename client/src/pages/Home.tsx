@@ -196,7 +196,7 @@ export default function Home() {
                   <img
                 src="/images/ae-moderna/Logo1_89eb9a49.png"
                 alt="AE Moderna - Sinônimo de Confiabilidade" 
-                className="h-11 sm:h-14 w-auto object-contain drop-shadow-[0_0_12px_rgba(168,85,247,0.35)]"
+                className="h-[5.5rem] sm:h-[7rem] w-auto object-contain drop-shadow-[0_0_12px_rgba(168,85,247,0.35)]"
               />
             </a>
           </div>
