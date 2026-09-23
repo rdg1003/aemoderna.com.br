@@ -120,43 +120,43 @@ export default function Home() {
 
   const structureImages = [
     {
-      src: "/manus-storage/estrutura-ae-moderna_f6830bca.jpg",
+      src: "/images/ae-moderna/estrutura-ae-moderna_f6830bca.jpg",
       title: "Estrutura para decisões importantes",
       desc: "Ambientes pensados para receber clientes com discrição, conforto e profissionalismo.",
       size: "wide"
     },
     {
-      src: "/manus-storage/direcao-juridica_b0b18d6b.jpg",
+      src: "/images/ae-moderna/direcao-juridica_b0b18d6b.jpg",
       title: "Direção jurídica",
       desc: "Experiência técnica à frente de cada estratégia.",
       size: "standard"
     },
     {
-      src: "/manus-storage/equipe-ae-moderna_d62f64b0.jpg",
+      src: "/images/ae-moderna/equipe-ae-moderna_d62f64b0.jpg",
       title: "Nossa equipe",
       desc: "Pessoas que trabalham juntas por soluções mais viáveis.",
       size: "standard"
     },
     {
-      src: "/manus-storage/equipe-reuniao_36342732.jpg",
+      src: "/images/ae-moderna/equipe-reuniao_36342732.jpg",
       title: "Trabalho colaborativo",
       desc: "Alinhamento e responsabilidade em cada caso atendido.",
       size: "standard"
     },
     {
-      src: "/manus-storage/atendimento-consultivo_fe6e83c7.jpg",
+      src: "/images/ae-moderna/atendimento-consultivo_fe6e83c7.jpg",
       title: "Atendimento próximo",
       desc: "Escuta cuidadosa para entender o cenário completo do cliente.",
       size: "standard"
     },
     {
-      src: "/manus-storage/sala-reunioes_536de476.jpg",
+      src: "/images/ae-moderna/sala-reunioes_536de476.jpg",
       title: "Sala de reuniões",
       desc: "Espaço reservado para análises e negociações estratégicas.",
       size: "standard"
     },
     {
-      src: "/manus-storage/equipe-escritorio_93cabea2.jpg",
+      src: "/images/ae-moderna/equipe-escritorio_93cabea2.jpg",
       title: "Rotina de trabalho",
       desc: "Organização e foco para acompanhar cada etapa do processo.",
       size: "standard"
@@ -191,10 +191,10 @@ export default function Home() {
       {/* Top Bar Institucional */}
       <header className="sticky top-0 z-50 bg-[#0c0618]/90 backdrop-blur-md border-b border-purple-900/40">
         <div className="container mx-auto flex items-center justify-between py-4">
-          <div className="flex items-center gap-3">
-            <a href="#hero" className="inline-block transition-transform hover:scale-105 duration-200">
-              <img 
-                src="/manus-storage/Logo1_89eb9a49.png" 
+              <div className="flex items-center gap-3">
+                <a href="#hero" className="inline-block transition-transform hover:scale-105 duration-200">
+                  <img
+                src="/images/ae-moderna/Logo1_89eb9a49.png"
                 alt="AE Moderna - Sinônimo de Confiabilidade" 
                 className="h-11 sm:h-14 w-auto object-contain drop-shadow-[0_0_12px_rgba(168,85,247,0.35)]"
               />
@@ -887,8 +887,8 @@ export default function Home() {
         <div className="container mx-auto space-y-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-purple-900/40">
             <div className="flex items-center gap-3">
-              <img 
-                src="/manus-storage/Logo1_89eb9a49.png" 
+              <img
+                src="/images/ae-moderna/Logo1_89eb9a49.png"
                 alt="AE Moderna" 
                 className="h-10 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
               />
